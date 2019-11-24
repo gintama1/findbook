@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:lineSpacingExtra="3dp"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="@android:color/black" />
+
+
+    </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/bt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:background="#F7B85B"
+            android:src="@drawable/ic_done"
+            />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/design_bottom_sheet1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#D9DEE0"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="300dp"
+
+        app:elevation="6dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+        <TextView
+            android:text="下拉恢复"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="字体大小"/>
+    <SeekBar
+        android:id="@+id/seekbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E9E8DF"
+        android:max="20"
+        android:progress="0"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="阅读背景"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#E9E8DF"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/background_1"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/background_1"
+
+            android:layout_height="wrap_content"
+            />
+        <ImageView
+            android:id="@+id/background_2"
+            android:layout_width="wrap_content"
+            android:src="@drawable/background_2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:id="@+id/background_3"
+            android:layout_width="wrap_content"
+            android:src="@drawable/background_3"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:id="@+id/background_4"
+            android:layout_width="wrap_content"
+            android:src="@drawable/background_4"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+
+            android:text="字体样式设置"/>
+        <LinearLayout
+            android:background="#E9E8DF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+<com.example.spider.NewTextView.hksnztView
+    android:id="@+id/text_style1"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:textSize="20sp"
+    android:background="#F8F4F4"
+    android:text="华康少女"
+    />
+        <com.example.spider.NewTextView.official_scriptView
+            android:id="@+id/text_style2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:background="#F8F4F4"
+            android:layout_marginLeft="30dp"
+            android:text="隶书字体"/>
+
+            <com.example.spider.NewTextView.fzktjtView
+                android:id="@+id/text_style3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:background="#F8F4F4"
+                android:layout_marginLeft="30dp"
+                android:text="方正卡通"/>
+
+            <com.example.spider.NewTextView.fzlxjtView
+                android:id="@+id/text_style4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:background="#F8F4F4"
+                android:layout_marginLeft="30dp"
+                android:text="方正流行"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
